@@ -34,6 +34,26 @@
 ) ); ?>
     </nav>
     <!-- Page Header -->
+    <?php if(is_single()){ ?>
+    <?php 
+     $thumb = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID) ,'large');?>
+    <header class="masthead"
+     style="background-image: url('<?php echo $thumb['0'];?>')">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-md-10 mx-auto">
+            <div class="post-heading">
+              <h1><?php the_title(); ?></h1>
+              <span class="meta">Posted by
+              <?php the_author(); ?>
+                on <?php the_date(); ?></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <?php }else{?>  
     <header class="masthead" style="background-image: url('<?php echo get_template_directory_uri();?>/img/home-bg.jpg')">
       <div class="overlay"></div>
       <div class="container">
@@ -47,3 +67,4 @@
         </div>
       </div>
     </header>
+<?php } ?>

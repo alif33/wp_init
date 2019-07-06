@@ -7,16 +7,8 @@
         if(have_posts()){
          while(have_posts()){
           the_post();?>
-          <div class="post-preview">
-            <?php the_post_thumbnail('medium');?>
-              <h2 class="post-title">
-              <?php the_title();?>
-              </h2>
-              <?php the_content();?>
-        
-            <p class="post-meta">Posted by
-              <a href="#"><?php the_author();?></a>
-              on <?php the_date();?></p>
+          <div class="post-preview">           
+              <?php the_content();?>                
           </div>
           <hr>
           <?php }}else{?>
