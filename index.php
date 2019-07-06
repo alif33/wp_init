@@ -8,15 +8,13 @@
          while(have_posts()){
           the_post();?>
           <div class="post-preview">
-            <a href="post.html">
             <?php the_post_thumbnail('medium');?>
               <h2 class="post-title">
-               <?php the_title();?>
+              <a href="<?php the_permalink();?>"> <?php the_title();?> </a>
               </h2>
               <h3 class="post-subtitle">
               <?php the_excerpt();?>
-              </h3>
-            </a>
+              </h3>          
             <p class="post-meta">Posted by
               <a href="#"><?php the_author();?></a>
               on <?php the_date();?></p>
