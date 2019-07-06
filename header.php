@@ -46,8 +46,8 @@
             <div class="post-heading">
               <h1><?php the_title(); ?></h1>
               <span class="meta">Posted by
-              <?php the_author(); ?>
-                on <?php the_date(); ?></span>
+              <?php the_author_meta('display_name',$post->post_author);?>
+                on <?php echo get_the_date(); ?></span>
             </div>
           </div>
         </div>
