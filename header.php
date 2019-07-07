@@ -5,9 +5,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
-    <meta name="author" content="">
-    
-    <title>code4webs.com - Bootstrap Theme</title>
+    <meta name="author" content="">   
+    <title><?php bloginfo('name');?></title>
 
 <?php wp_head();?>
 </head>
@@ -17,7 +16,7 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
       <div class="container">
-        <a class="navbar-brand" href="index.html">Code4webs.com</a>
+        <a class="navbar-brand" href="<?php /*bloginfo('url')*/echo site_url('/');?>"><?php bloginfo('name');?></a>
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           Menu
           <i class="fas fa-bars"></i>
@@ -47,8 +46,8 @@
         <div class="row">
           <div class="col-lg-8 col-md-10 mx-auto">
             <div class="site-heading">
-              <h1>Code4webs.com</h1>
-              <span class="subheading">A Blog Theme by Code4webs.com</span>
+              <h1><?php bloginfo('email');?></h1>
+              <span class="subheading"><?php bloginfo('description');?></span>
             </div>
           </div>
         </div>
