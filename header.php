@@ -34,7 +34,7 @@
 ) ); ?>
     </nav>
     <!-- Page Header -->
-    <header class="masthead" style="background-image: url('img/home-bg.jpg')">
+    <header class="masthead" style="background-image: url('<?php echo get_template_directory_uri();?>/img/home-bg.jpg')">
       <div class="overlay"></div>
       <div class="container">
         <div class="row">
