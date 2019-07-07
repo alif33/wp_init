@@ -1,4 +1,7 @@
 <?php
+//include bootsrap_nav_walker
+require_once get_template_directory() . '/lib/class-wp-bootstrap-navwalker.php';
+
 add_action('after_setup_theme' , 'first_wp');
 
 function first_wp(){
@@ -19,4 +22,10 @@ function first_wp_enqueue(){
 //No necessary enqueue of jQuery.min.js
 }
 add_action('wp_enqueue_scripts' , 'first_wp_enqueue');
+//Register nav Menu
+register_nav_menus( array(
+	'primary' => __( 'Header', 'wp_init' ),
+));
+
+
 ?>

@@ -21,23 +21,17 @@
           Menu
           <i class="fas fa-bars"></i>
         </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="index.html">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="about.html">About</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="post.html">Sample Post</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="contact.html">Contact</a>
-            </li>
-          </ul>
-        </div>
-      </div>
+      <!--  Compare nav_nav_menu to (html forms Nav menu) -->
+  <?php    wp_nav_menu( array(
+	'theme_location'  => 'primary',
+	'depth'	          => 2, // 1 = no dropdowns, 2 = with dropdowns.
+	'container'       => 'div',
+	'container_class' => 'collapse navbar-collapse',
+	'container_id'    => 'navbarResponsive',
+	'menu_class'      => 'navbar-nav ml-auto',
+	'fallback_cb'     => 'WP_Bootstrap_Navwalker::fallback',
+	'walker'          => new WP_Bootstrap_Navwalker(),
+) ); ?>
     </nav>
     <!-- Page Header -->
     <header class="masthead" style="background-image: url('img/home-bg.jpg')">
