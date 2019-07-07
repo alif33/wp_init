@@ -35,10 +35,10 @@
     </footer>
 
     <!-- Bootstrap core JavaScript -->
-    <script src="vendor/jquery/jquery.min.js"></script>
+  <!--  <script src="vendor/jquery/jquery.min.js"></script> -->
 
     <!-- Custom scripts for this template -->
-    
+
 <?php wp_footer();?>
   </body>
 
