@@ -9,6 +9,7 @@
           the_post();?>
           <div class="post-preview">
             <a href="post.html">
+            <?php the_post_thumbnail('medium');?>
               <h2 class="post-title">
                <?php the_title();?>
               </h2>
