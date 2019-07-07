@@ -28,8 +28,9 @@
           <!-- Pager -->
           <div class="clearfix">
           <!-- <a class="btn btn-primary float-right" href="#">Older Posts &rarr;</a> -->
-          <?php previous_posts_link('&larr; Previous posts');?>
-          <?php next_posts_link('Older posts &rarr;', 0) ;?>
+          <?php// previous_posts_link('&larr; Previous posts');?>
+          <?php //next_posts_link('Older posts &rarr;', 0) ;?>
+          <?php the_posts_pagination(array('screen_reader_text' =>' '));?>
           </div>
         </div>
       </div>
