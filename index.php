@@ -27,9 +27,9 @@
           <?php } ?>
           <!-- Pager -->
           <div class="clearfix">
-
-            <a class="btn btn-primary float-right" href="#">Older Posts &rarr;</a>
-          
+          <!-- <a class="btn btn-primary float-right" href="#">Older Posts &rarr;</a> -->
+          <?php previous_posts_link('&larr; Previous posts');?>
+          <?php next_posts_link('Older posts &rarr;', 0) ;?>
           </div>
         </div>
       </div>
