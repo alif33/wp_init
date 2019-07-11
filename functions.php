@@ -7,6 +7,11 @@ add_action('after_setup_theme' , 'first_wp');
 function first_wp(){
     add_theme_support('post-formats', array( 'aside', 'gallery','audio','video'));
     add_theme_support('post-thumbnails');
+    add_theme_support( 'custom-logo',  array(
+        'height'      => 50,
+        'width'       => 100,
+        'flex-width' => false   
+        ));
 } 
 
 function first_wp_enqueue(){
@@ -26,5 +31,6 @@ add_action('wp_enqueue_scripts' , 'first_wp_enqueue');
 register_nav_menus( array(
 	'primary' => __( 'Header', 'wp_init' ),
 ));
+
 
 ?>
