@@ -60,10 +60,14 @@
         <div class="row">
           <div class="col-lg-8 col-md-10 mx-auto">
             <div class="site-heading">
+                <!-- For heading -->
             <?php if( get_field('page_header') ): ?>
               <h1><?php the_field('page_header');?></h1>
+            <?php endif; ?>
+                <!-- For Sub-heading -->
+              <?php if( get_field('sub_heading') ): ?>  
+                <span class="subheading"><?php the_field('sub_heading');?></span>
               <?php endif; ?>
-              <span class="subheading"><?php bloginfo('description');?></span>
             </div>
           </div>
         </div>
