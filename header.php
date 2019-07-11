@@ -53,8 +53,8 @@
         </div>
       </div>
     </header>
-    <?php }else{?>  
-    <header class="masthead" style="background-image: url('<?php echo get_template_directory_uri();?>/img/home-bg.jpg')">
+    <?php }else{?>    
+    <header class="masthead" style="background-image: url('<?php  if( get_field('header_iamge') ):  the_field('header_iamge');   endif;?>)">
       <div class="overlay"></div>
       <div class="container">
         <div class="row">
