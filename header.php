@@ -60,7 +60,9 @@
         <div class="row">
           <div class="col-lg-8 col-md-10 mx-auto">
             <div class="site-heading">
-              <h1><?php bloginfo('email');?></h1>
+            <?php if( get_field('page_header') ): ?>
+              <h1><?php the_field('page_header');?></h1>
+              <?php endif; ?>
               <span class="subheading"><?php bloginfo('description');?></span>
             </div>
           </div>
