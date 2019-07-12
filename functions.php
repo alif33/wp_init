@@ -12,7 +12,11 @@ function first_wp(){
         'width'       => 100,
         'flex-width' => false   
         ));
-    add_theme_support( 'custom-header' );   
+    add_theme_support( 'custom-header',$dlt);
+    $dlt = array(
+        'header-text'     => true,
+	'default-text-color'  => '#fff'
+    );   
 } 
 function first_wp_enqueue(){
     wp_enqueue_style('bootsrap', get_template_directory_uri().'/vendor/bootstrap/css/bootstrap.min.css');
@@ -38,6 +42,9 @@ function first_wp_custom_header(){
 <style>
 .masthead{ 
   background-image: url('<?php header_image(); ?>')!important; 
+}
+.default-title{
+    color: #<?php echo get_header_textcolor();?>;
 }
 </style>
 <?php }}
