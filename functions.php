@@ -50,6 +50,11 @@ function first_wp_custom_header(){
 <style>
 .default-title{
     color: #<?php echo get_header_textcolor();?>;
+    <?php 
+    if(!display_header_text()){ 
+    echo "display:none;";
+    }
+    ?>
 }
 </style>
 <?php }}
