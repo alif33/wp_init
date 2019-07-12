@@ -37,12 +37,17 @@ register_nav_menus( array(
 ));
 
 function first_wp_custom_header(){
-    if(current_theme_supports('custom-header') && is_home()){
+    if(current_theme_supports('custom-header')){
 ?>
+<?php if( is_home()){ ?>
 <style>
 .masthead{ 
   background-image: url('<?php header_image(); ?>')!important; 
 }
+}
+</style> 
+<?php } ?>  
+<style>
 .default-title{
     color: #<?php echo get_header_textcolor();?>;
 }
