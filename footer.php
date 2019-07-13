@@ -4,7 +4,7 @@
           <div class="col-lg-8 col-md-10 mx-auto">
             <ul class="list-inline text-center">
               <li class="list-inline-item">
-                <a href="#">
+                <a href="<?php echo get_option('twitter_social');?>">
                   <span class="fa-stack fa-lg">
                     <i class="fas fa-circle fa-stack-2x"></i>
                     <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
@@ -12,7 +12,7 @@
                 </a>
               </li>
               <li class="list-inline-item">
-                <a href="#">
+                <a href="<?php echo get_option('facebook_social');?>">
                   <span class="fa-stack fa-lg">
                     <i class="fas fa-circle fa-stack-2x"></i>
                     <i class="fab fa-facebook-f fa-stack-1x fa-inverse"></i>
@@ -20,7 +20,7 @@
                 </a>
               </li>
               <li class="list-inline-item">
-                <a href="#">
+                <a href="<?php echo get_option('github_social');?>">
                   <span class="fa-stack fa-lg">
                     <i class="fas fa-circle fa-stack-2x"></i>
                     <i class="fab fa-github fa-stack-1x fa-inverse"></i>
