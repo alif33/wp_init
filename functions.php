@@ -97,8 +97,13 @@ function code4webs_testimonials(){
 register_post_type('code4webs_postype', array(
 'labels'=>array(
 'name' => 'Smile',
-'singular_name' => 'Testimonial'
- ),
+'add_new' =>'New smile',
+'add_new_item'  =>'New smile testimonials',
+'singular_name' => 'Testimonial',
+'edit_item' =>'Edit smile'   ),
+'description' =>'Please add your Testimonials',
+'menu_icon' => 'dashicons-admin-settings',
+'menu_position'  => 5,
 'public'=>true
 ));
 }
