@@ -90,3 +90,15 @@ function twitter_option_callBack(){ ?>
  function copyright_option_callBack(){ ?>
 <input type="text" class="regular-text" name="copy_right" value="<?php echo get_option('copy_right');?>" id="cp-url" > 
 <?php }?> 
+<?php
+//custom postype 
+add_action('init', 'code4webs_testimonials'); 
+function code4webs_testimonials(){
+register_post_type('code4webs_postype', array(
+'labels'=>array(
+'name' => 'Smile',
+'singular_name' => 'Testimonial'
+ ),
+'public'=>true
+));
+}
