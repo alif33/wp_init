@@ -104,6 +104,8 @@ register_post_type('code4webs_postype', array(
 'description' =>'Please add your Testimonials',
 'menu_icon' => 'dashicons-admin-settings',
 'menu_position'  => 5,
-'public'=>true
+'public'=>true,
+'show_in_menu' => true,
+'supports' =>array('title','editor','author')
 ));
 }
