@@ -59,3 +59,26 @@ function first_wp_custom_header(){
 </style>
 <?php }}
 add_action('wp_head' , 'first_wp_custom_header');
+
+//Start settings api....
+add_action('admin_init','code4webs_theme_options');
+ function code4webs_theme_options(){
+//registerd a section under settings gereral 
+    add_settings_section( 'theme-option', 'Footer options', 'cb_footer_option_section', 'general' ); 
+//registered a filed under footer settins option 
+add_settings_field('twitter_social', 'Enter your Twitter URl', 'twitter_option_callBack' , 'general' ,'theme-option');
+add_settings_field('facebook_social', 'Enter your facebook URl', 'facebook_option_callBack' , 'general' ,'theme-option');
+add_settings_field('github_social', 'Enter your github profile link', 'github_option_callBack' , 'general' ,'theme-option');
+ }
+function cb_footer_option_section () {
+    echo "Please enter Data for your Footer option";
+    }
+function twitter_option_callBack(){ ?>
+ <input type="text" class="regular-text" name="facebook-url" id="tw-url" > 
+ <?php }
+ function facebook_option_callBack(){ ?>
+ <input type="text" class="regular-text" name="facebook-url" id="fb-url" > 
+ <?php }
+ function github_option_callBack(){ ?>
+ <input type="text" class="regular-text" name="facebook-url" id="gb-url" > 
+ <?php }?> 
