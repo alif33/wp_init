@@ -28,7 +28,7 @@
                 </a>
               </li>
             </ul>
-            <p class="copyright text-muted">Copyright &copy; code4webs.com</p>
+            <p class="copyright text-muted">Copyright &copy;<?php echo get_option('copy_right');?></p>
           </div>
         </div>
       </div>
