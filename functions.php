@@ -69,16 +69,19 @@ add_action('admin_init','code4webs_theme_options');
 add_settings_field('twitter_social', 'Enter your Twitter URl', 'twitter_option_callBack' , 'general' ,'theme-option');
 add_settings_field('facebook_social', 'Enter your facebook URl', 'facebook_option_callBack' , 'general' ,'theme-option');
 add_settings_field('github_social', 'Enter your github profile link', 'github_option_callBack' , 'general' ,'theme-option');
- }
+ register_setting('general','twitter_social');
+ register_setting('general','facebook_social');
+ register_setting('general','github_social');
+}
 function cb_footer_option_section () {
     echo "Please enter Data for your Footer option";
     }
 function twitter_option_callBack(){ ?>
- <input type="text" class="regular-text" name="facebook-url" id="tw-url" > 
+ <input type="text" class="regular-text" name="twitter_social" value="<?php echo get_option('twitter_social');?>" id="tw-url" > 
  <?php }
  function facebook_option_callBack(){ ?>
- <input type="text" class="regular-text" name="facebook-url" id="fb-url" > 
+ <input type="text" class="regular-text" name="facebook_social" value="<?php echo get_option('facebook_social');?>" id="fb-url" > 
  <?php }
  function github_option_callBack(){ ?>
- <input type="text" class="regular-text" name="facebook-url" id="gb-url" > 
+ <input type="text" class="regular-text" name="github_social" value="<?php echo get_option('github_social');?>" id="gb-url" > 
  <?php }?> 
